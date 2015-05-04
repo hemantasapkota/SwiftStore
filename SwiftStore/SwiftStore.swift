@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SwiftStore {
+public class SwiftStore {
   
   var db:Store!
   
@@ -16,7 +16,7 @@ class SwiftStore {
     db = Store(DBName: storeName)
   }
   
-  subscript(key: String) -> String? {
+  public subscript(key: String) -> String? {
     get {
       return db.get(key)
     }
