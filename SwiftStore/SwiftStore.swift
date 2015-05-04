@@ -12,7 +12,7 @@ public class SwiftStore {
   
   var db:Store!
   
-  init(storeName: String) {
+  public init(storeName: String) {
     db = Store(DBName: storeName)
   }
   
