@@ -24,7 +24,6 @@
 /* Begin PBXBuildFile section */
 		2EAADF2C1AF6F94600783BAD /* SwiftStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EAADF2B1AF6F94600783BAD /* SwiftStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2EAADF321AF6F94600783BAD /* SwiftStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAADF261AF6F94600783BAD /* SwiftStore.framework */; };
-		2EAADF391AF6F94600783BAD /* SwiftStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAADF381AF6F94600783BAD /* SwiftStoreTests.m */; };
 		2EAADF441AF6F97A00783BAD /* Store.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EAADF421AF6F97A00783BAD /* Store.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2EAADF451AF6F97A00783BAD /* Store.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EAADF431AF6F97A00783BAD /* Store.mm */; };
 		2EAADF921AF6FA1F00783BAD /* c.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EAADF841AF6FA1F00783BAD /* c.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +45,7 @@
 		2EAADFA41AF6FAD100783BAD /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAADFA31AF6FAD100783BAD /* libc++.dylib */; };
 		2EAADFA51AF6FAEC00783BAD /* libc++.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAADFA31AF6FAD100783BAD /* libc++.dylib */; };
 		2EAADFB01AF7086700783BAD /* SwiftStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAADFAF1AF7086700783BAD /* SwiftStore.swift */; };
+		2EAADFC11AF797D500783BAD /* SwiftStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAADFC01AF797D500783BAD /* SwiftStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,6 @@
 		2EAADF2B1AF6F94600783BAD /* SwiftStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftStore.h; sourceTree = "<group>"; };
 		2EAADF311AF6F94600783BAD /* SwiftStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EAADF371AF6F94600783BAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2EAADF381AF6F94600783BAD /* SwiftStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftStoreTests.m; sourceTree = "<group>"; };
 		2EAADF421AF6F97A00783BAD /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		2EAADF431AF6F97A00783BAD /* Store.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Store.mm; sourceTree = "<group>"; };
 		2EAADF841AF6FA1F00783BAD /* c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
@@ -91,6 +90,8 @@
 		2EAADFA01AF6FA4500783BAD /* libleveldb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libleveldb.a; sourceTree = "<group>"; };
 		2EAADFA31AF6FAD100783BAD /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		2EAADFAF1AF7086700783BAD /* SwiftStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftStore.swift; sourceTree = "<group>"; };
+		2EAADFBD1AF7969D00783BAD /* SwiftStoreTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftStoreTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		2EAADFC01AF797D500783BAD /* SwiftStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +158,8 @@
 		2EAADF351AF6F94600783BAD /* SwiftStoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				2EAADF381AF6F94600783BAD /* SwiftStoreTests.m */,
+				2EAADFC01AF797D500783BAD /* SwiftStoreTests.swift */,
+				2EAADFBD1AF7969D00783BAD /* SwiftStoreTests-Bridging-Header.h */,
 				2EAADF361AF6F94600783BAD /* Supporting Files */,
 			);
 			path = SwiftStoreTests;
@@ -362,7 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EAADF391AF6F94600783BAD /* SwiftStoreTests.m in Sources */,
+				2EAADFC11AF797D500783BAD /* SwiftStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +526,7 @@
 		2EAADF401AF6F94600783BAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -535,12 +538,15 @@
 				INFOPLIST_FILE = SwiftStoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftStoreTests/SwiftStoreTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2EAADF411AF6F94600783BAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -548,6 +554,7 @@
 				INFOPLIST_FILE = SwiftStoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftStoreTests/SwiftStoreTests-Bridging-Header.h";
 			};
 			name = Release;
 		};
