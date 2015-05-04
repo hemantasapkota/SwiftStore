@@ -45,6 +45,7 @@
 		2EAADFA21AF6FAA000783BAD /* libleveldb.a in Resources */ = {isa = PBXBuildFile; fileRef = 2EAADFA01AF6FA4500783BAD /* libleveldb.a */; };
 		2EAADFA41AF6FAD100783BAD /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAADFA31AF6FAD100783BAD /* libc++.dylib */; };
 		2EAADFA51AF6FAEC00783BAD /* libc++.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAADFA31AF6FAD100783BAD /* libc++.dylib */; };
+		2EAADFB01AF7086700783BAD /* SwiftStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAADFAF1AF7086700783BAD /* SwiftStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		2EAADF911AF6FA1F00783BAD /* write_batch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = write_batch.h; sourceTree = "<group>"; };
 		2EAADFA01AF6FA4500783BAD /* libleveldb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libleveldb.a; sourceTree = "<group>"; };
 		2EAADFA31AF6FAD100783BAD /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		2EAADFAF1AF7086700783BAD /* SwiftStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				2EAADF421AF6F97A00783BAD /* Store.h */,
 				2EAADF431AF6F97A00783BAD /* Store.mm */,
 				2EAADF2B1AF6F94600783BAD /* SwiftStore.h */,
+				2EAADFAF1AF7086700783BAD /* SwiftStore.swift */,
 				2EAADF291AF6F94600783BAD /* Supporting Files */,
 			);
 			path = SwiftStore;
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EAADF451AF6F97A00783BAD /* Store.mm in Sources */,
+				2EAADFB01AF7086700783BAD /* SwiftStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +473,7 @@
 		2EAADF3D1AF6F94600783BAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -487,12 +492,14 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2EAADF3E1AF6F94600783BAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -579,6 +586,7 @@
 				2EAADF3E1AF6F94600783BAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EAADF3F1AF6F94600783BAD /* Build configuration list for PBXNativeTarget "SwiftStoreTests" */ = {
 			isa = XCConfigurationList;
@@ -587,6 +595,7 @@
 				2EAADF411AF6F94600783BAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EAADFA91AF6FC4F00783BAD /* Build configuration list for PBXAggregateTarget "SwiftStoreAG" */ = {
 			isa = XCConfigurationList;
@@ -595,6 +604,7 @@
 				2EAADFAB1AF6FC4F00783BAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
