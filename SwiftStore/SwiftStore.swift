@@ -25,4 +25,8 @@ public class SwiftStore {
       db.put(key, value: newValue!)
     }
   }
+  
+  public func close() {
+    db.close()
+  }
 }
