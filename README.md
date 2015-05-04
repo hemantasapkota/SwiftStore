@@ -47,3 +47,13 @@ class DB : SwiftStore {
 DB.store["username"] = "jondoe"
 DB.store["auth-token"] = "1231sdfjl123"
 ```
+
+### Installation ###
+
+#### Carthage ####
+* Add ```github "hemantasapkota/SwiftStore" ~> 1.2.3``` to your ```cartfile```
+* Execute ```carthage update```
+
+#### Manual Installation ####
+* TODO
+
