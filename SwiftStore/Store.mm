@@ -61,6 +61,26 @@ using namespace std;
   }
 }
 
+-(NSArray *)iterate:(NSString *)key {
+  leveldb::ReadOptions readOptions;
+  leveldb::Iterator *it = db->NewIterator(readOptions);
+  
+  leveldb::Slice slice = leveldb::Slice(key.UTF8String);
+  
+  std::string endKey = key.UTF8String;
+  endKey.append("0xFF");
+  
+  NSMutableArray *array = [[NSMutableArray alloc] init];
+  
+  for (it->Seek(slice); it->Valid() && it->key().ToString() < endKey; it->Next()) {
+    NSString *value = [[NSString alloc] initWithCString:it->value().ToString().c_str() encoding:[NSString defaultCStringEncoding]];
+    [array addObject:value];
+  }
+  delete it;
+  
+  return array;
+}
+
 -(NSString *)get:(NSString *)key {
   ostringstream keyStream;
   keyStream << key.UTF8String;

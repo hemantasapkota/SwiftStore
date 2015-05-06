@@ -16,6 +16,8 @@
 
 -(void)put:(NSString *)key value:(NSString *)value;
 
+-(NSArray *)iterate:(NSString *)key;
+
 -(void)close;
 
 @end
