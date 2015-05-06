@@ -26,6 +26,10 @@ public class SwiftStore {
     }
   }
   
+  public func collect(key: String) -> [String] {
+    return db.iterate(key) as! [String]
+  }
+  
   public func close() {
     db.close()
   }
