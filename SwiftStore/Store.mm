@@ -92,7 +92,7 @@ using namespace std;
   return [[NSString alloc] initWithUTF8String:value.c_str()];
 }
 
--(void)put:(NSString *)key value:(NSString *)value {
+-(bool)put:(NSString *)key value:(NSString *)value {
   ostringstream keyStream;
   keyStream << key.UTF8String;
   
@@ -101,6 +101,18 @@ using namespace std;
 
   leveldb::WriteOptions writeOptions;
   leveldb::Status s = self->db->Put(writeOptions, keyStream.str(), valueStream.str());
+  
+  return s.ok();
+}
+
+-(bool)delete:(NSString *)key {
+  ostringstream keySream;
+  keySream << key.UTF8String;
+  
+  leveldb::WriteOptions writeOptions;
+  leveldb::Status s = self->db->Delete(writeOptions, keySream.str());
+  
+  return s.ok();
 }
 
 -(void)close {

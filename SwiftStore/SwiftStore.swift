@@ -26,6 +26,10 @@ public class SwiftStore {
     }
   }
   
+  public func delete(key: String) -> Bool {
+    return db.delete(key)
+  }
+  
   public func collect(key: String) -> [String] {
     return db.iterate(key) as! [String]
   }

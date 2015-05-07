@@ -14,7 +14,9 @@
 
 -(NSString *)get:(NSString *)key;
 
--(void)put:(NSString *)key value:(NSString *)value;
+-(bool)put:(NSString *)key value:(NSString *)value;
+
+-(bool)delete:(NSString *)key;
 
 -(NSArray *)iterate:(NSString *)key;
 
