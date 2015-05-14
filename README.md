@@ -18,12 +18,12 @@ store["username"] = "jondoe"
 store["auth-token"] = "cdfsd1231sdf12321"
 
 // Get value
-let username = store["username"] 
+let username = store["username"]!
 if !username.isEmpty {
   println(username)
 }
 
-let authToken = store["auth-token"] 
+let authToken = store["auth-token"]!
 if !authToken.isEmpty {
   println(authToken)
 }
