@@ -89,7 +89,9 @@ using namespace std;
   string value;
   leveldb::Status s = self->db->Get(readOptions, keyStream.str(), &value);
   
-  return [[NSString alloc] initWithUTF8String:value.c_str()];
+  NSString *nsstr = [[NSString alloc] initWithUTF8String:value.c_str()];
+  
+  return [nsstr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
 
 -(bool)put:(NSString *)key value:(NSString *)value {
