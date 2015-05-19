@@ -34,15 +34,25 @@ if !authToken.isEmpty {
 ```
 class DB : SwiftStore {
     /* Shared Instance */
+    struct Static {
+        static var onceToken: dispatch_once_t = 0
+        static var instance: OLDB? = nil
+    }
+    
     class var store:OLDB {
-        struct Singleton {
-            static let instance = DB()
+        dispatch_once(&Static.onceToken) {
+            Static.instance = OLDB()
         }
-        return Singleton.instance
+        return Static.instance!
     }
     
     init() {
         super.init(storeName: "oldb")
+    }
+    
+    override func close() {
+        super.close()
+        Static.onceToken = 0
     }
 }
 
