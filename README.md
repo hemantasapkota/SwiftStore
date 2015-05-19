@@ -36,18 +36,18 @@ class DB : SwiftStore {
     /* Shared Instance */
     struct Static {
         static var onceToken: dispatch_once_t = 0
-        static var instance: OLDB? = nil
+        static var instance: DB? = nil
     }
     
-    class var store:OLDB {
+    class var store:DB {
         dispatch_once(&Static.onceToken) {
-            Static.instance = OLDB()
+            Static.instance = DB()
         }
         return Static.instance!
     }
     
     init() {
-        super.init(storeName: "oldb")
+        super.init(storeName: "db")
     }
     
     override func close() {
