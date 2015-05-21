@@ -13,6 +13,7 @@
 #include <string>
 
 #import <leveldb/db.h>
+#import <leveldb/write_batch.h>
 
 using namespace std;
 
@@ -79,6 +80,22 @@ using namespace std;
   delete it;
   
   return array;
+}
+
+-(bool)deleteBatch:(NSString *)key {
+  leveldb::WriteBatch batch;
+  std::string endKey = key.UTF8String;
+  endKey.append("0xFF");
+  
+  NSArray *items = [self iterate:key];
+  for (int i=0; i <= [items count]; i++) {
+    NSString *item = [items objectAtIndex:i];
+    leveldb::Slice slice = leveldb::Slice(item.UTF8String);
+    batch.Delete(slice);
+  }
+  
+  leveldb::Status s = self->db->Write(leveldb::WriteOptions(), &batch);
+  return s.ok();
 }
 
 -(NSString *)get:(NSString *)key {

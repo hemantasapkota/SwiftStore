@@ -34,6 +34,10 @@ public class SwiftStore {
     return db.iterate(key) as! [String]
   }
   
+  public func deleteCollection(key: String) -> Bool {
+    return db.deleteBatch(key)
+  }
+  
   public func close() {
     db.close()
   }
