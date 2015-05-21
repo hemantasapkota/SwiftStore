@@ -18,7 +18,7 @@
 
 -(bool)delete:(NSString *)key;
 
--(bool)deleteBatch:(NSString *)key;
+-(bool)deleteBatch:(NSArray *)keys;
 
 -(NSArray *)iterate:(NSString *)key;
 
