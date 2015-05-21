@@ -82,15 +82,12 @@ using namespace std;
   return array;
 }
 
--(bool)deleteBatch:(NSString *)key {
+-(bool)deleteBatch:(NSArray*)keys {
   leveldb::WriteBatch batch;
-  std::string endKey = key.UTF8String;
-  endKey.append("0xFF");
   
-  NSArray *items = [self iterate:key];
-  for (int i=0; i <= [items count]; i++) {
-    NSString *item = [items objectAtIndex:i];
-    leveldb::Slice slice = leveldb::Slice(item.UTF8String);
+  for (int i=0; i <= [keys count]; i++) {
+    NSString *key = [keys objectAtIndex:i];
+    leveldb::Slice slice = leveldb::Slice(key.UTF8String);
     batch.Delete(slice);
   }
   
