@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2EAADFA81AF6FC4F00783BAD"
-               BuildableName = "SwiftStoreAG"
-               BlueprintName = "SwiftStoreAG"
+               BlueprintIdentifier = "2EAADF251AF6F94600783BAD"
+               BuildableName = "SwiftStore.framework"
+               BlueprintName = "SwiftStore"
+               ReferencedContainer = "container:SwiftStore.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2EAADF301AF6F94600783BAD"
+               BuildableName = "SwiftStoreTests.xctest"
+               BlueprintName = "SwiftStoreTests"
                ReferencedContainer = "container:SwiftStore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,7 +42,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2EAADF301AF6F94600783BAD"
+               BuildableName = "SwiftStoreTests.xctest"
+               BlueprintName = "SwiftStoreTests"
+               ReferencedContainer = "container:SwiftStore.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2EAADF251AF6F94600783BAD"
+            BuildableName = "SwiftStore.framework"
+            BlueprintName = "SwiftStore"
+            ReferencedContainer = "container:SwiftStore.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -42,9 +75,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2EAADFA81AF6FC4F00783BAD"
-            BuildableName = "SwiftStoreAG"
-            BlueprintName = "SwiftStoreAG"
+            BlueprintIdentifier = "2EAADF251AF6F94600783BAD"
+            BuildableName = "SwiftStore.framework"
+            BlueprintName = "SwiftStore"
             ReferencedContainer = "container:SwiftStore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,9 +93,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2EAADFA81AF6FC4F00783BAD"
-            BuildableName = "SwiftStoreAG"
-            BlueprintName = "SwiftStoreAG"
+            BlueprintIdentifier = "2EAADF251AF6F94600783BAD"
+            BuildableName = "SwiftStore.framework"
+            BlueprintName = "SwiftStore"
             ReferencedContainer = "container:SwiftStore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
