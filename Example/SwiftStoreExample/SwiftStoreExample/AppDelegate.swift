@@ -16,11 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
-    DB.store["username"] = "mario"
+    window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    window?.backgroundColor = UIColor.whiteColor()
     
-    let username = DB.store["username"]
+    let navController = UINavigationController(rootViewController: ExampleViewController())
     
-    println(username)
+    window?.rootViewController = navController
+    
+    window?.makeKeyAndVisible()
     
     return true
   }
