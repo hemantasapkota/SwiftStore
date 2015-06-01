@@ -67,5 +67,7 @@ DB.store["auth-token"] = "1231sdfjl123"
 * Execute ```carthage update```
 
 #### Manual Installation ####
-* TODO
+* Clone this repo: ```git clone https://github.com/hemantasapkota/SwiftStore/```
+* Copy ```SwiftStore.xcodeproj``` to your project.
+* Add ```SwiftStore.framework``` to the **Embedded Binaries** secion on the **General** tab of your main target.
 
