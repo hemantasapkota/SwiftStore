@@ -17,6 +17,7 @@
 		2EDBEB0F1B017A5B00998346 /* SwiftStoreExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDBEB0E1B017A5B00998346 /* SwiftStoreExampleTests.swift */; };
 		2EDBEB391B017C4C00998346 /* SwiftStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDBEB2F1B017B4D00998346 /* SwiftStore.framework */; };
 		2EDBEB3B1B017C9700998346 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDBEB3A1B017C9700998346 /* DB.swift */; };
+		2EE9CC8A1B1F00E600D1FDF6 /* SimpleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE9CC891B1F00E600D1FDF6 /* SimpleCollectionViewController.swift */; };
 		2EF961A51B1B3CDC003B5ACF /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF961A41B1B3CDC003B5ACF /* ExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		2EDBEB0E1B017A5B00998346 /* SwiftStoreExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStoreExampleTests.swift; sourceTree = "<group>"; };
 		2EDBEB281B017B4C00998346 /* SwiftStore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftStore.xcodeproj; path = ../../SwiftStore.xcodeproj; sourceTree = "<group>"; };
 		2EDBEB3A1B017C9700998346 /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
+		2EE9CC891B1F00E600D1FDF6 /* SimpleCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewController.swift; sourceTree = "<group>"; };
 		2EF961A41B1B3CDC003B5ACF /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,15 +115,16 @@
 		2EDBEAF51B017A5A00998346 /* SwiftStoreExample */ = {
 			isa = PBXGroup;
 			children = (
+				2E2DEBD71B1B318300BFA90D /* Extensions.swift */,
 				2E2DEBC41B1AB0E300BFA90D /* SimpleRowView.swift */,
 				2EDBEB3A1B017C9700998346 /* DB.swift */,
 				2EDBEAF81B017A5A00998346 /* AppDelegate.swift */,
 				2EF961A41B1B3CDC003B5ACF /* ExampleViewController.swift */,
+				2EE9CC891B1F00E600D1FDF6 /* SimpleCollectionViewController.swift */,
 				2EDBEAFA1B017A5A00998346 /* SimpleKeyValueViewController.swift */,
 				2EDBEAFF1B017A5A00998346 /* Images.xcassets */,
 				2EDBEB011B017A5A00998346 /* LaunchScreen.xib */,
 				2EDBEAF61B017A5A00998346 /* Supporting Files */,
-				2E2DEBD71B1B318300BFA90D /* Extensions.swift */,
 			);
 			path = SwiftStoreExample;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				2EDBEAFB1B017A5A00998346 /* SimpleKeyValueViewController.swift in Sources */,
 				2EDBEAF91B017A5A00998346 /* AppDelegate.swift in Sources */,
 				2EDBEB3B1B017C9700998346 /* DB.swift in Sources */,
+				2EE9CC8A1B1F00E600D1FDF6 /* SimpleCollectionViewController.swift in Sources */,
 				2E2DEBC51B1AB0E300BFA90D /* SimpleRowView.swift in Sources */,
 				2EF961A51B1B3CDC003B5ACF /* ExampleViewController.swift in Sources */,
 			);

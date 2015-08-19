@@ -27,7 +27,7 @@ class ExampleViewController : UIViewController {
 class ExampleView : UIView, UITableViewDataSource, UITableViewDelegate {
     
     /* Items */
-    var items = ["Saving Key / Value Pairs", "Saving a list of items"]
+    var items = ["Saving Key / Value Pairs" ]
     
     /* Table View */
     var tableView: UITableView!
@@ -73,7 +73,7 @@ class ExampleView : UIView, UITableViewDataSource, UITableViewDelegate {
         if item == 0 {
             viewPusher(SimpleKeyValueViewController())
         } else if item == 1 {
-            
+//            viewPusher(SimpleCollectionViewController())
         }
     }
 }
