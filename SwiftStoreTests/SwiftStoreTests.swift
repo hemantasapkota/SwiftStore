@@ -53,7 +53,7 @@ class SwiftStoreTests: XCTestCase {
         let time = dispatch_time(DISPATCH_TIME_NOW, secs)
         dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
             let value = self.store["item1"]
-            println(value)
+            print(value)
         })
 
     }
