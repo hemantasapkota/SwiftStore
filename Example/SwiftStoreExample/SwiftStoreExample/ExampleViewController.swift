@@ -51,7 +51,7 @@ class ExampleView : UIView, UITableViewDataSource, UITableViewDelegate {
         tableView.registerClass(ExampleViewCell.self, forCellReuseIdentifier: "ExampleViewCell")
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -85,7 +85,7 @@ class ExampleViewCell : UITableViewCell {
     }
 
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

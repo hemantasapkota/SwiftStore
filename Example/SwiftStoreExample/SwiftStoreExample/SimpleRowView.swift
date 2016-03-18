@@ -48,7 +48,7 @@ class SimpleRowView : UIView {
         
         keyText = UITextField()
         keyText.layer.borderWidth = 0.5
-        keyText.layer.borderColor = UIColor(rgba: "#bdc3c7").CGColor!
+        keyText.layer.borderColor = UIColor(rgba: "#bdc3c7").CGColor
         keyText.placeholder = "Key"
         keyText.text = "\(key)"
         keyText.enabled = false
@@ -63,7 +63,7 @@ class SimpleRowView : UIView {
         valueText = UITextField()
         valueText.placeholder = "Value"
         valueText.layer.borderWidth = 0.5
-        valueText.layer.borderColor = UIColor(rgba: "#bdc3c7").CGColor!
+        valueText.layer.borderColor = UIColor(rgba: "#bdc3c7").CGColor
         addSubview(valueText)
         valueText.snp_makeConstraints { (make) -> Void in
             make.top.greaterThanOrEqualTo(keyText.snp_bottom).offset(5)
@@ -72,7 +72,7 @@ class SimpleRowView : UIView {
             make.height.equalTo(30)
         }
         
-        saveBtn = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        saveBtn = UIButton(type: UIButtonType.System)
         saveBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         saveBtn.setTitle("Save", forState: UIControlState.Normal)
         saveBtn.backgroundColor = UIColor(rgba: "#27ae60")
@@ -83,7 +83,7 @@ class SimpleRowView : UIView {
             make.width.equalTo(self.snp_width).dividedBy(3)
         }
         
-        deleteBtn = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        deleteBtn = UIButton(type: UIButtonType.System)
         deleteBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         deleteBtn.setTitle("Delete", forState: UIControlState.Normal)
         deleteBtn.backgroundColor = UIColor(rgba: "#e74c3c")
@@ -109,8 +109,8 @@ class SimpleRowView : UIView {
     
     func handleSave() {
         if let executeSave = onSave {
-            let key = keyText.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-            let value = valueText.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let key = keyText.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let value = valueText.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
             executeSave(key, value)
         }
     }
@@ -118,12 +118,12 @@ class SimpleRowView : UIView {
     func handleDelete() {
         valueText.text = ""
         if let executeDelete = onDelete {
-            let key = keyText.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let key = keyText.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
             executeDelete(key)
         }
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
