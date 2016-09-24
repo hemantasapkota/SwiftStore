@@ -44,7 +44,6 @@ class DB : SwiftStore {
     
     override func close() {
         super.close()
-        Static.onceToken = 0
     }
 }
 
