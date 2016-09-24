@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Hemanta Sapkota. All rights reserved.
 //
 import UIKit
-import SnapKit
 
 class SimpleKeyValueViewController: UIViewController {
 
@@ -26,9 +25,9 @@ class SimpleKeyValueViewController: UIViewController {
 class SimpleKeyValueView : UIView {
     
     init() {
-        super.init(frame: UIScreen.mainScreen().bounds)
+        super.init(frame: UIScreen.main.bounds)
         
-        backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor.white
         
         var keys = ["Name", "Address", "Phone", "Email"]
         
@@ -48,7 +47,7 @@ class SimpleKeyValueView : UIView {
             }
             
             row.onDelete = { key in
-                DB.store.delete(key)
+                DB.store.delete(key: key)
             }
             
             addSubview(row)
@@ -64,7 +63,7 @@ class SimpleKeyValueView : UIView {
                 make.height.equalTo(110)
                 
                 lastRow = row
-                index++
+                index = index + 1
             }
         }
     }

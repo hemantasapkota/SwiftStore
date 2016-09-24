@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1E38081D966B8B0014A2E5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1E38031D9669A70014A2E5 /* SnapKit.framework */; };
+		2E1E38091D966B8B0014A2E5 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1E38031D9669A70014A2E5 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2E2DEBC51B1AB0E300BFA90D /* SimpleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DEBC41B1AB0E300BFA90D /* SimpleRowView.swift */; };
-		2E2DEBCA1B1AB1A200BFA90D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2DEBC91B1AB1A200BFA90D /* SnapKit.framework */; };
 		2E2DEBD81B1B318300BFA90D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DEBD71B1B318300BFA90D /* Extensions.swift */; };
 		2EDBEAF91B017A5A00998346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDBEAF81B017A5A00998346 /* AppDelegate.swift */; };
 		2EDBEAFB1B017A5A00998346 /* SimpleKeyValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDBEAFA1B017A5A00998346 /* SimpleKeyValueViewController.swift */; };
@@ -22,6 +23,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2E1E38021D9669A70014A2E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E1E37FD1D9669A70014A2E5 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
+			remoteInfo = SnapKit;
+		};
+		2E1E38041D9669A70014A2E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E1E37FD1D9669A70014A2E5 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
+			remoteInfo = "SnapKit Tests";
+		};
+		2E1E38061D966B710014A2E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E1E37FD1D9669A70014A2E5 /* SnapKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EEBCC9D719CC627D0083B827;
+			remoteInfo = SnapKit;
+		};
+		2E1E380A1D966B8B0014A2E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E1E37FD1D9669A70014A2E5 /* SnapKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EEBCC9D719CC627D0083B827;
+			remoteInfo = SnapKit;
+		};
 		2EDBEB091B017A5A00998346 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2EDBEAEB1B017A5A00998346 /* Project object */;
@@ -45,9 +74,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2E1E380C1D966B8B0014A2E5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2E1E38091D966B8B0014A2E5 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2E1E37FD1D9669A70014A2E5 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = Carthage/Checkouts/SnapKit/SnapKit.xcodeproj; sourceTree = "<group>"; };
 		2E2DEBC41B1AB0E300BFA90D /* SimpleRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleRowView.swift; sourceTree = "<group>"; };
-		2E2DEBC91B1AB1A200BFA90D /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		2E2DEBD71B1B318300BFA90D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2EDBEAF31B017A5A00998346 /* SwiftStoreExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStoreExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDBEAF71B017A5A00998346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,8 +112,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E2DEBCA1B1AB1A200BFA90D /* SnapKit.framework in Frameworks */,
 				2EDBEB391B017C4C00998346 /* SwiftStore.framework in Frameworks */,
+				2E1E38081D966B8B0014A2E5 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,11 +127,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E1E37FE1D9669A70014A2E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E38031D9669A70014A2E5 /* SnapKit.framework */,
+				2E1E38051D9669A70014A2E5 /* SnapKit Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2E2DEBCC1B1AB1F900BFA90D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E1E37FD1D9669A70014A2E5 /* SnapKit.xcodeproj */,
 				2EDBEB281B017B4C00998346 /* SwiftStore.xcodeproj */,
-				2E2DEBC91B1AB1A200BFA90D /* SnapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,10 +226,13 @@
 				2EDBEAF01B017A5A00998346 /* Frameworks */,
 				2EDBEAF11B017A5A00998346 /* Resources */,
 				2E2DEBCB1B1AB1BF00BFA90D /* ShellScript */,
+				2E1E380C1D966B8B0014A2E5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2E1E38071D966B710014A2E5 /* PBXTargetDependency */,
+				2E1E380B1D966B8B0014A2E5 /* PBXTargetDependency */,
 			);
 			name = SwiftStoreExample;
 			productName = SwiftStoreExample;
@@ -215,9 +270,11 @@
 				TargetAttributes = {
 					2EDBEAF21B017A5A00998346 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 					2EDBEB071B017A5A00998346 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 2EDBEAF21B017A5A00998346;
 					};
 				};
@@ -235,6 +292,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 2E1E37FE1D9669A70014A2E5 /* Products */;
+					ProjectRef = 2E1E37FD1D9669A70014A2E5 /* SnapKit.xcodeproj */;
+				},
+				{
 					ProductGroup = 2EDBEB291B017B4C00998346 /* Products */;
 					ProjectRef = 2EDBEB281B017B4C00998346 /* SwiftStore.xcodeproj */;
 				},
@@ -248,6 +309,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		2E1E38031D9669A70014A2E5 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = 2E1E38021D9669A70014A2E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2E1E38051D9669A70014A2E5 /* SnapKit Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit Tests.xctest";
+			remoteRef = 2E1E38041D9669A70014A2E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		2EDBEB2F1B017B4D00998346 /* SwiftStore.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -290,7 +365,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			outputPaths = (
 			);
@@ -326,6 +400,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2E1E38071D966B710014A2E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapKit;
+			targetProxy = 2E1E38061D966B710014A2E5 /* PBXContainerItemProxy */;
+		};
+		2E1E380B1D966B8B0014A2E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapKit;
+			targetProxy = 2E1E380A1D966B8B0014A2E5 /* PBXContainerItemProxy */;
+		};
 		2EDBEB0A1B017A5A00998346 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2EDBEAF21B017A5A00998346 /* SwiftStoreExample */;
@@ -431,6 +515,7 @@
 		2EDBEB131B017A5B00998346 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -439,12 +524,14 @@
 				INFOPLIST_FILE = SwiftStoreExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		2EDBEB141B017A5B00998346 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,6 +540,7 @@
 				INFOPLIST_FILE = SwiftStoreExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -471,6 +559,7 @@
 				INFOPLIST_FILE = SwiftStoreExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftStoreExample.app/SwiftStoreExample";
 			};
 			name = Debug;
@@ -486,6 +575,7 @@
 				INFOPLIST_FILE = SwiftStoreExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftStoreExample.app/SwiftStoreExample";
 			};
 			name = Release;

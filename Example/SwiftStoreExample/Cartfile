@@ -1,1 +1,1 @@
-github "SnapKit/SnapKit"
+github "SnapKit/SnapKit" ~> 3.0.0

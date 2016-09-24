@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 class ExampleViewController : UIViewController {
     
@@ -35,7 +36,7 @@ class ExampleView : UIView, UITableViewDataSource, UITableViewDelegate {
     var viewPusher: ( (UIViewController) -> Void)!
     
     init() {
-        super.init(frame: UIScreen.mainScreen().bounds)
+        super.init(frame: UIScreen.main.bounds)
         
         tableView = UITableView()
         tableView.dataSource = self
@@ -48,27 +49,27 @@ class ExampleView : UIView, UITableViewDataSource, UITableViewDelegate {
             make.height.equalTo(self.snp_height)
         }
         
-        tableView.registerClass(ExampleViewCell.self, forCellReuseIdentifier: "ExampleViewCell")
+        tableView.register(ExampleViewCell.self, forCellReuseIdentifier: "ExampleViewCell")
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ExampleViewCell") as! ExampleViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ExampleViewCell") as! ExampleViewCell
         
-        cell.textLabel?.text = items[indexPath.item]
+        cell.textLabel?.text = items[(indexPath as NSIndexPath).item]
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
-        let item = indexPath.item
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let item = (indexPath as NSIndexPath).item
         
         if item == 0 {
             viewPusher(SimpleKeyValueViewController())

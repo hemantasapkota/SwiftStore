@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import SnapKit
 
 /* Simple Row View */
 class SimpleRowView : UIView {
@@ -35,7 +34,7 @@ class SimpleRowView : UIView {
     var onDelete: ( (String) -> Void)?
     
     init(rowNumber: Int, key: String) {
-        super.init(frame: UIScreen.mainScreen().bounds)
+        super.init(frame: UIScreen.main.bounds)
         
         label = UILabel()
         label.text = "\(rowNumber)"
@@ -48,10 +47,10 @@ class SimpleRowView : UIView {
         
         keyText = UITextField()
         keyText.layer.borderWidth = 0.5
-        keyText.layer.borderColor = UIColor(rgba: "#bdc3c7").CGColor
+        keyText.layer.borderColor = UIColor(rgba: "#bdc3c7").cgColor
         keyText.placeholder = "Key"
         keyText.text = "\(key)"
-        keyText.enabled = false
+        keyText.isEnabled = false
         addSubview(keyText)
         keyText.snp_makeConstraints { (make) -> Void in
             make.top.greaterThanOrEqualTo(5)
@@ -63,7 +62,7 @@ class SimpleRowView : UIView {
         valueText = UITextField()
         valueText.placeholder = "Value"
         valueText.layer.borderWidth = 0.5
-        valueText.layer.borderColor = UIColor(rgba: "#bdc3c7").CGColor
+        valueText.layer.borderColor = UIColor(rgba: "#bdc3c7").cgColor
         addSubview(valueText)
         valueText.snp_makeConstraints { (make) -> Void in
             make.top.greaterThanOrEqualTo(keyText.snp_bottom).offset(5)
@@ -72,9 +71,9 @@ class SimpleRowView : UIView {
             make.height.equalTo(30)
         }
         
-        saveBtn = UIButton(type: UIButtonType.System)
-        saveBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        saveBtn.setTitle("Save", forState: UIControlState.Normal)
+        saveBtn = UIButton(type: UIButtonType.system)
+        saveBtn.setTitleColor(UIColor.white, for: UIControlState())
+        saveBtn.setTitle("Save", for: UIControlState())
         saveBtn.backgroundColor = UIColor(rgba: "#27ae60")
         addSubview(saveBtn)
         saveBtn.snp_makeConstraints { (make) -> Void in
@@ -83,9 +82,9 @@ class SimpleRowView : UIView {
             make.width.equalTo(self.snp_width).dividedBy(3)
         }
         
-        deleteBtn = UIButton(type: UIButtonType.System)
-        deleteBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        deleteBtn.setTitle("Delete", forState: UIControlState.Normal)
+        deleteBtn = UIButton(type: UIButtonType.system)
+        deleteBtn.setTitleColor(UIColor.white, for: UIControlState())
+        deleteBtn.setTitle("Delete", for: UIControlState())
         deleteBtn.backgroundColor = UIColor(rgba: "#e74c3c")
         addSubview(deleteBtn)
         deleteBtn.snp_makeConstraints { (make) -> Void in
@@ -103,14 +102,14 @@ class SimpleRowView : UIView {
             make.width.equalTo(self.snp_width)
         }
         
-        saveBtn.addTarget(self, action: "handleSave", forControlEvents: UIControlEvents.TouchUpInside)
-        deleteBtn.addTarget(self, action: "handleDelete", forControlEvents: UIControlEvents.TouchUpInside)
+        saveBtn.addTarget(self, action: #selector(SimpleRowView.handleSave), for: UIControlEvents.touchUpInside)
+        deleteBtn.addTarget(self, action: #selector(SimpleRowView.handleDelete), for: UIControlEvents.touchUpInside)
     }
     
     func handleSave() {
         if let executeSave = onSave {
-            let key = keyText.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-            let value = valueText.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let key = keyText.text!.trimmingCharacters(in: CharacterSet.whitespaces)
+            let value = valueText.text!.trimmingCharacters(in: CharacterSet.whitespaces)
             executeSave(key, value)
         }
     }
@@ -118,7 +117,7 @@ class SimpleRowView : UIView {
     func handleDelete() {
         valueText.text = ""
         if let executeDelete = onDelete {
-            let key = keyText.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let key = keyText.text!.trimmingCharacters(in: CharacterSet.whitespaces)
             executeDelete(key)
         }
     }

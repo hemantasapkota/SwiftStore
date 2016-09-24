@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EEBCC9D719CC627D0083B827"
                BuildableName = "SnapKit.framework"
-               BlueprintName = "SnapKit iOS"
+               BlueprintName = "SnapKit"
                ReferencedContainer = "container:SnapKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,26 +29,26 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EEBCC9E119CC627D0083B827"
-               BuildableName = "SnapKit iOS Tests.xctest"
-               BlueprintName = "SnapKit iOS Tests"
+               BuildableName = "SnapKit Tests.xctest"
+               BlueprintName = "SnapKit Tests"
                ReferencedContainer = "container:SnapKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EEBCC9E119CC627D0083B827"
-               BuildableName = "SnapKit iOS Tests.xctest"
-               BlueprintName = "SnapKit iOS Tests"
+               BuildableName = "SnapKit Tests.xctest"
+               BlueprintName = "SnapKit Tests"
                ReferencedContainer = "container:SnapKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -58,7 +58,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EEBCC9D719CC627D0083B827"
             BuildableName = "SnapKit.framework"
-            BlueprintName = "SnapKit iOS"
+            BlueprintName = "SnapKit"
             ReferencedContainer = "container:SnapKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,11 +66,11 @@
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -80,7 +80,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EEBCC9D719CC627D0083B827"
             BuildableName = "SnapKit.framework"
-            BlueprintName = "SnapKit iOS"
+            BlueprintName = "SnapKit"
             ReferencedContainer = "container:SnapKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -88,17 +88,17 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EEBCC9D719CC627D0083B827"
             BuildableName = "SnapKit.framework"
-            BlueprintName = "SnapKit iOS"
+            BlueprintName = "SnapKit"
             ReferencedContainer = "container:SnapKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
