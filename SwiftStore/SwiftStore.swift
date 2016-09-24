@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SwiftStore {
+open class SwiftStore {
   
   var db:Store!
   
