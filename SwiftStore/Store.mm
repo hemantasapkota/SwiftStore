@@ -55,10 +55,10 @@ using namespace std;
   
   leveldb::Status status = leveldb::DB::Open(options, [dbPath UTF8String], &self->db);
   if (false == status.ok()) {
-      NSLog(@"ERROR: Unable to open/create Open Learning database.");
+      NSLog(@"ERROR: Unable to open/create database.");
       std::cout << status.ToString();
   } else {
-      NSLog(@"INFO: Open Learning database setup.");
+      NSLog(@"INFO: Database setup.");
   }
 }
 
