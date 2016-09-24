@@ -13,7 +13,7 @@ public class SwiftStore {
   var db:Store!
   
   public init(storeName: String) {
-    db = Store(DBName: storeName)
+    db = Store(dbName: storeName)
   }
   
   public subscript(key: String) -> String? {
