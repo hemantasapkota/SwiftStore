@@ -9,7 +9,7 @@ Key/Value store for Swift backed by LevelDB.
 
 #### Create instances of store ####
 
-```
+```swift
 import SwiftStore
 
 // Create a store.
@@ -33,7 +33,7 @@ if !authToken.isEmpty {
 
 #### As Singleton ####
 
-```
+```swift
 class DB : SwiftStore {
     /* Shared Instance */
     static let store = DB()
