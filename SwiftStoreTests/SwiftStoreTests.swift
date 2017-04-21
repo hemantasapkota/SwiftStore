@@ -57,6 +57,47 @@ class SwiftStoreTests: XCTestCase {
         })
 
     }
+    
+    func testCollection() {
+        
+        var r1Keys = [String]()
+        for i in (0 ..< 20) {
+            let key = "r1-\(i)"
+            r1Keys.append(key)
+            
+            store[key] = "r1-\(i)"
+        }
+        
+        var r2Keys = [String]()
+        for i in (0 ..< 30) {
+            let key = "r2-\(i)"
+            r1Keys.append(key)
+            
+            store[key] = "r2-\(i)"
+        }
+        
+        var r1 = store.collect(key: "r1")
+        XCTAssertEqual(r1.count, 20, "Length of collected range should be 20.")
+
+        var r2 = store.collect(key: "r2")
+        XCTAssertEqual(r2.count, 30, "Length of collected range should be 30.")
+        
+        // Delete collection of first keys
+        store.deleteCollection(keys: r1Keys)
+        
+        r1 = store.collect(key: "r1")
+        
+        XCTAssertEqual(r1.count, 0, "After deleting a collection, the length should be 0.")
+        
+        // Delete second set of keys
+        store.deleteCollection(keys: r2Keys)
+        
+        r2 = store.collect(key: "r2")
+        
+        XCTAssertEqual(r2.count, 0, "After deleting a collection, the length should be 0.")
+        
+        
+    }
 
     override func tearDown() {
         store.close()
