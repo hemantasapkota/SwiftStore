@@ -106,7 +106,7 @@ class SimpleRowView : UIView {
         deleteBtn.addTarget(self, action: #selector(SimpleRowView.handleDelete), for: UIControlEvents.touchUpInside)
     }
     
-    func handleSave() {
+    @objc func handleSave() {
         if let executeSave = onSave {
             let key = keyText.text!.trimmingCharacters(in: CharacterSet.whitespaces)
             let value = valueText.text!.trimmingCharacters(in: CharacterSet.whitespaces)
@@ -114,7 +114,7 @@ class SimpleRowView : UIView {
         }
     }
     
-    func handleDelete() {
+    @objc func handleDelete() {
         valueText.text = ""
         if let executeDelete = onDelete {
             let key = keyText.text!.trimmingCharacters(in: CharacterSet.whitespaces)
