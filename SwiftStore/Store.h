@@ -22,6 +22,8 @@
 
 -(NSArray *)iterate:(NSString *)key;
 
+-(NSArray *)findKeys:(NSString *)key;
+
 -(void)close;
 
 @end
