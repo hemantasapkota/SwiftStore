@@ -33,6 +33,10 @@ open class SwiftStore {
   public func collect(key: String) -> [String] {
     return db.iterate(key) as! [String]
   }
+    
+  public func findKeys(key: String) -> [String] {
+    return db.findKeys(key) as! [String]
+  }
   
   public func deleteCollection(keys: [String]) -> Bool {
     return db.deleteBatch(keys)
