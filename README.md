@@ -60,11 +60,6 @@ DB.store["auth-token"] = "1231sdfjl123"
 * Copy ```SwiftStore.xcodeproj``` to your project.
 * Add ```SwiftStore.framework``` to the **Embedded Binaries** secion on the **General** tab of your main target.
 
-### Used in Production Apps ###
-This framework is being used in the following app-store approved apps.
-
-* [Open Learning](https://itunes.apple.com/us/app/openlearning-learn-free-courses/id981790180?ls=1&mt=8)
-
 ### Author ###
 * [Hemanta Sapkota](https://twitter.com/ozhemanta) / [Linked In](https://au.linkedin.com/in/hemantasapkota)
 
