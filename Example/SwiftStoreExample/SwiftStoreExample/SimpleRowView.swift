@@ -71,9 +71,9 @@ class SimpleRowView : UIView {
             make.height.equalTo(30)
         }
         
-        saveBtn = UIButton(type: UIButtonType.system)
-        saveBtn.setTitleColor(UIColor.white, for: UIControlState())
-        saveBtn.setTitle("Save", for: UIControlState())
+        saveBtn = UIButton(type: UIButton.ButtonType.system)
+        saveBtn.setTitleColor(UIColor.white, for: UIControl.State())
+        saveBtn.setTitle("Save", for: UIControl.State())
         saveBtn.backgroundColor = UIColor(rgba: "#27ae60")
         addSubview(saveBtn)
         saveBtn.snp_makeConstraints { (make) -> Void in
@@ -82,9 +82,9 @@ class SimpleRowView : UIView {
             make.width.equalTo(self.snp_width).dividedBy(3)
         }
         
-        deleteBtn = UIButton(type: UIButtonType.system)
-        deleteBtn.setTitleColor(UIColor.white, for: UIControlState())
-        deleteBtn.setTitle("Delete", for: UIControlState())
+        deleteBtn = UIButton(type: UIButton.ButtonType.system)
+        deleteBtn.setTitleColor(UIColor.white, for: UIControl.State())
+        deleteBtn.setTitle("Delete", for: UIControl.State())
         deleteBtn.backgroundColor = UIColor(rgba: "#e74c3c")
         addSubview(deleteBtn)
         deleteBtn.snp_makeConstraints { (make) -> Void in
@@ -102,8 +102,8 @@ class SimpleRowView : UIView {
             make.width.equalTo(self.snp_width)
         }
         
-        saveBtn.addTarget(self, action: #selector(SimpleRowView.handleSave), for: UIControlEvents.touchUpInside)
-        deleteBtn.addTarget(self, action: #selector(SimpleRowView.handleDelete), for: UIControlEvents.touchUpInside)
+        saveBtn.addTarget(self, action: #selector(SimpleRowView.handleSave), for: UIControl.Event.touchUpInside)
+        deleteBtn.addTarget(self, action: #selector(SimpleRowView.handleDelete), for: UIControl.Event.touchUpInside)
     }
     
     @objc func handleSave() {
