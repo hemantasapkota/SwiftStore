@@ -1,7 +1,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ### SwiftStore ###
-Key/Value store for Swift backed by LevelDB. 
+Key/Value store for Swift backed by LevelDB.
 
 ### Usage ###
 
@@ -35,11 +35,11 @@ if !authToken.isEmpty {
 class DB : SwiftStore {
     /* Shared Instance */
     static let store = DB()
-    
+
     init() {
         super.init(storeName: "db")
     }
-    
+
     override func close() {
         super.close()
     }
@@ -66,12 +66,12 @@ This framework is being used in the following app-store approved apps.
 * [Open Learning](https://itunes.apple.com/us/app/openlearning-learn-free-courses/id981790180?ls=1&mt=8)
 
 ### Author ###
-* [Hemanta Sapkota](https://twitter.com/ozhemanta) / [Blog](http://hemantasapkota.github.io/) / [Linked In](https://au.linkedin.com/in/hemantasapkota)
+* [Hemanta Sapkota](https://twitter.com/ozhemanta) / [Linked In](https://au.linkedin.com/in/hemantasapkota)
 
 ### License ###
 The MIT License (MIT)
 
-Copyright (c) 2017 Hemanta Sapkota
+Copyright (c) 2019 Hemanta Sapkota
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
