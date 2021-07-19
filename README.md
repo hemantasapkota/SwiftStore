@@ -61,12 +61,12 @@ DB.store["auth-token"] = "1231sdfjl123"
 * Add ```SwiftStore.framework``` to the **Embedded Binaries** secion on the **General** tab of your main target.
 
 ### Author ###
-* [Hemanta Sapkota](https://twitter.com/ozhemanta) / [Linked In](https://au.linkedin.com/in/hemantasapkota)
+* [Hemanta Sapkota](https://twitter.com/heeemanta) / [Linked In](https://au.linkedin.com/in/hemantasapkota)
 
 ### License ###
 The MIT License (MIT)
 
-Copyright (c) 2019 Hemanta Sapkota
+Copyright (c) 2021 Hemanta Sapkota
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
