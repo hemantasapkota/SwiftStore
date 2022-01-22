@@ -60,13 +60,10 @@ DB.store["auth-token"] = "1231sdfjl123"
 * Copy ```SwiftStore.xcodeproj``` to your project.
 * Add ```SwiftStore.framework``` to the **Embedded Binaries** secion on the **General** tab of your main target.
 
-### Author ###
-* [Hemanta Sapkota](https://twitter.com/heeemanta) / [Linked In](https://au.linkedin.com/in/hemantasapkota)
-
 ### License ###
 The MIT License (MIT)
 
-Copyright (c) 2021 Hemanta Sapkota
+Copyright (c) 2022 Hemanta Sapkota
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
