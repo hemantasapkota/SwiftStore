@@ -60,6 +60,10 @@ DB.store["auth-token"] = "1231sdfjl123"
 * Copy ```SwiftStore.xcodeproj``` to your project.
 * Add ```SwiftStore.framework``` to the **Embedded Binaries** secion on the **General** tab of your main target.
 
+### LevelDB Update ###
+
+This project has been updated to use the latest version of LevelDB from Google's official repository. The integration has been modernized to use XCFramework for better multi-architecture support. See [LEVELDB_UPDATE.md](LEVELDB_UPDATE.md) for details.
+
 ### License ###
 The MIT License (MIT)
 

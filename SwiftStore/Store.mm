@@ -12,8 +12,8 @@
 #include <sstream>
 #include <string>
 
-#import <leveldb/db.h>
-#import <leveldb/write_batch.h>
+#import <LevelDB/db.h>
+#import <LevelDB/write_batch.h>
 
 using namespace std;
 
@@ -119,6 +119,11 @@ using namespace std;
   leveldb::ReadOptions readOptions;
   string value;
   leveldb::Status s = self->db->Get(readOptions, keyStream.str(), &value);
+  
+  // Return nil if key doesn't exist or there was an error
+  if (!s.ok()) {
+    return nil;
+  }
   
   NSString *nsstr = [[NSString alloc] initWithUTF8String:value.c_str()];
   
