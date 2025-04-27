@@ -40,7 +40,7 @@ class SimpleRowView : UIView {
         label.text = "\(rowNumber)"
         label.textColor = UIColor(rgba: "#2c3e50")
         addSubview(label)
-        label.snp_makeConstraints { (make) -> Void in
+        label.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(5)
             make.left.equalTo(5)
         }
@@ -52,10 +52,10 @@ class SimpleRowView : UIView {
         keyText.text = "\(key)"
         keyText.isEnabled = false
         addSubview(keyText)
-        keyText.snp_makeConstraints { (make) -> Void in
+        keyText.snp.makeConstraints { (make) -> Void in
             make.top.greaterThanOrEqualTo(5)
-            make.left.equalTo(label.snp_right).offset(10)
-            make.width.equalTo(self.snp_width).offset(-60)
+            make.left.equalTo(label.snp.right).offset(10)
+            make.width.equalTo(self.snp.width).offset(-60)
             make.height.equalTo(30)
         }
         
@@ -64,10 +64,10 @@ class SimpleRowView : UIView {
         valueText.layer.borderWidth = 0.5
         valueText.layer.borderColor = UIColor(rgba: "#bdc3c7").cgColor
         addSubview(valueText)
-        valueText.snp_makeConstraints { (make) -> Void in
-            make.top.greaterThanOrEqualTo(keyText.snp_bottom).offset(5)
-            make.left.equalTo(label.snp_right).offset(10)
-            make.width.equalTo(self.snp_width).offset(-60)
+        valueText.snp.makeConstraints { (make) -> Void in
+            make.top.greaterThanOrEqualTo(keyText.snp.bottom).offset(5)
+            make.left.equalTo(label.snp.right).offset(10)
+            make.width.equalTo(self.snp.width).offset(-60)
             make.height.equalTo(30)
         }
         
@@ -76,10 +76,10 @@ class SimpleRowView : UIView {
         saveBtn.setTitle("Save", for: UIControl.State())
         saveBtn.backgroundColor = UIColor(rgba: "#27ae60")
         addSubview(saveBtn)
-        saveBtn.snp_makeConstraints { (make) -> Void in
-            make.top.greaterThanOrEqualTo(valueText.snp_bottom).offset(5)
-            make.left.equalTo(valueText.snp_left)
-            make.width.equalTo(self.snp_width).dividedBy(3)
+        saveBtn.snp.makeConstraints { (make) -> Void in
+            make.top.greaterThanOrEqualTo(valueText.snp.bottom).offset(5)
+            make.left.equalTo(valueText.snp.left)
+            make.width.equalTo(self.snp.width).dividedBy(3)
         }
         
         deleteBtn = UIButton(type: UIButton.ButtonType.system)
@@ -87,19 +87,19 @@ class SimpleRowView : UIView {
         deleteBtn.setTitle("Delete", for: UIControl.State())
         deleteBtn.backgroundColor = UIColor(rgba: "#e74c3c")
         addSubview(deleteBtn)
-        deleteBtn.snp_makeConstraints { (make) -> Void in
-            make.top.greaterThanOrEqualTo(valueText.snp_bottom).offset(5)
-            make.right.equalTo(valueText.snp_right)
-            make.width.equalTo(self.snp_width).dividedBy(3)
+        deleteBtn.snp.makeConstraints { (make) -> Void in
+            make.top.greaterThanOrEqualTo(valueText.snp.bottom).offset(5)
+            make.right.equalTo(valueText.snp.right)
+            make.width.equalTo(self.snp.width).dividedBy(3)
         }
         
         let sep = UILabel()
         sep.backgroundColor = UIColor(rgba: "#bdc3c7")
         addSubview(sep)
-        sep.snp_makeConstraints { (make) -> Void in
+        sep.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(0.5)
-            make.bottom.equalTo(self.snp_bottom)
-            make.width.equalTo(self.snp_width)
+            make.bottom.equalTo(self.snp.bottom)
+            make.width.equalTo(self.snp.width)
         }
         
         saveBtn.addTarget(self, action: #selector(SimpleRowView.handleSave), for: UIControl.Event.touchUpInside)

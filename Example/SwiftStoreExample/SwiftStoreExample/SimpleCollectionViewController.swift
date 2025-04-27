@@ -12,18 +12,29 @@ import UIKit
 class SimpleCollectionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var sectionTitles = ["Common Names", "Popular Places"]
+    private var tableView = UITableView()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
-        let tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
-        
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "Cell")
         
-        view = tableView
+        view.addSubview(tableView)
+        
+        setupConstraints()
     }
     
+    private func setupConstraints() {
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
 }
 
 extension SimpleCollectionViewController {
